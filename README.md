@@ -13,36 +13,47 @@ CREDITS:
 **Main Contributors**
 
 Sam Roberts - Coding, Feedback Co-ordination, Graphic Design & Testing
+
 The ICRTouch Team - Coding, Graphic Design (Touchpoint Skin 2024)
 
 **Skin Testers & Feedback Providers (A.K.A Lab Rats)**
 
 Michael Davis - Iconography & layout feedback
+
 Dylan Hall - Moral support & co-worker stuff
+
 Martin Tattersall - Iconography feedback
+
 The ~~*redacted to avoid being sued*~~ Team - General feedback
+
 Members of the Mikel Discord Server - General & accessibility feedback
   
 **Asset Accreditation**
 
 Credit: icons8.com
+
 Icons Used: Back, Clock, Copy, Home, Merge, Photo Gallery, Printer, Redo, Rename, Scroll, Split, Table, Undo
 
 Credit: Google Fonts
+
 Fonts Used: Open Sans, Roboto
 
 Credit: Adobe Fonts
+
 Fonts Used: Futura
 
 **Inspiration**
 
 ICRTouch 2024 Skin (June Release)
+
 Windows 10 Explorer UI
 
 **Special Thanks**
 
 The ICRTouch Forum - For the countless advice provided
+
 The ICRTouch Development Team - For creating fantastic great learning resources
+
 Lu - For keeping me going <3
 
 Thank You!
