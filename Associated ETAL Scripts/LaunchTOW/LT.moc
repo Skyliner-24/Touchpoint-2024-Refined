@@ -1,0 +1,24 @@
+/////////////////
+// Launch TOW //
+///////////////
+
+function OnRunScriptKeyPress(nFile, nRecord, nNumber, nValue, nFlag)
+{
+        if (nNumber == 54)
+        {
+                function LaunchTOW()
+                {
+                        local url = "https://www.touchoffice.net/";
+                        local command = "start \"\" \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" " + url;
+                        system(command);
+                }
+                LaunchTOW();
+                {
+                        ICR_MessageBox("Once you have finished using Touch Office Web,", "please press 'Ok' to close the browser.");
+                        local CloseEdge = "taskkill /IM msedge.exe /F";
+                        system(CloseEdge);
+                }
+        return true; 
+        }
+        return false;
+}

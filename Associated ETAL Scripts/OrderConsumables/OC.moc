@@ -1,0 +1,111 @@
+////////////////////////
+// Order Consumables //
+//////////////////////
+
+function OnRunScriptKeyPress(nFile, nRecord, nNumber, nValue, nFlag)
+{
+    if (nNumber == 53)
+    {
+// Build the options and bring up the options for ordering
+        ICR_ListDialog_AddItem("Till Rolls", true);
+        ICR_ListDialog_AddItem("Spire Accessories", false);
+        ICR_ListDialog_AddItem("Ingenico Accessories", false);
+        ICR_ListDialog_AddItem("Replacement Parts", false);
+        ICR_ListDialog_AddItem("Replacement Batteries", false);
+
+        local nSelection = ICR_ListDialog("Select Consumable Type");
+// Depending on the 'nSelection' value, launch associated website page
+        if (nSelection == 1)
+        {
+                function LaunchTillRolls()
+                {
+// Define the website link
+                        local url = "https://yorkshirepayments.com/product-category/till-rolls/";
+// Define the path for Edge
+                        local LaunchEdge = "start \"\" \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" " + url;
+                        system(LaunchEdge);
+                }
+                LaunchTillRolls();
+                {
+// Prompt a message box whilst the user is on the site, so when they come back to TouchPoint they see it
+                        ICR_MessageBox("Once you have finished ordering," "please press 'Ok' to close the browser.");
+// After user presses Ok, close Edge 
+                        local CloseEdge = "taskkill /IM msedge.exe /F";
+                        system(CloseEdge);
+                }
+                return true; 
+        }
+
+        if (nSelection == 2)
+        {
+                function LaunchSpire()
+                {
+                        local url = "https://yorkshirepayments.com/product-category/spire-accessories/";
+                        local LaunchEdge = "start \"\" \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" " + url;
+                        system(LaunchEdge);
+                }
+                LaunchSpire();
+                {
+                        ICR_MessageBox("Once you have finished ordering," "please press 'Ok' to close the browser.");
+                        local CloseEdge = "taskkill /IM msedge.exe /F";
+                        system(CloseEdge);
+                }
+                return true; 
+        }
+
+        if (nSelection == 3)
+        {
+                function LaunchIngenico()
+                {
+                        local url = "https://yorkshirepayments.com/product-category/ingenico-accessories/";
+                        local command = "start \"\" \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" " + url;
+                        system(command);
+                }
+                LaunchIngenico();
+                {
+                        ICR_MessageBox("Once you have finished ordering," "please press 'Ok' to close the browser.");
+                        local CloseEdge = "taskkill /IM msedge.exe /F";
+                        system(CloseEdge);
+                }
+                return true; 
+        }
+
+        if (nSelection == 4)
+        {
+                function LaunchParts()
+                {
+                        local url = "https://yorkshirepayments.com/product-category/replacements/";
+                        local command = "start \"\" \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" " + url;
+                        system(command);
+                }
+                LaunchParts();
+                {
+                        ICR_MessageBox("Once you have finished ordering," "please press 'Ok' to close the browser.");
+                        local CloseEdge = "taskkill /IM msedge.exe /F";
+                        system(CloseEdge);
+                }
+                return true; 
+        }
+
+        if (nSelection == 5)
+        {
+                function LaunchBatteries()
+                {
+                        local url = "https://yorkshirepayments.com/product-category/batteries/";
+                        local command = "start \"\" \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" " + url;
+                        system(command);
+                }
+                LaunchBatteries();
+                {
+                        ICR_MessageBox("Once you have finished ordering," "please press 'Ok' to close the browser.");
+                        local CloseEdge = "taskkill /IM msedge.exe /F";
+                        system(CloseEdge);
+                }
+                return true; 
+        }
+// Return false if no valid selection is made
+        return false;
+    }
+// Return false if the condition for 'nNumber' is not met
+    return false;
+}

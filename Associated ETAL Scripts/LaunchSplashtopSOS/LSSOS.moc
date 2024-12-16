@@ -1,0 +1,54 @@
+///////////////////////////
+// Launch Splashtop SOS //
+/////////////////////////
+
+function OnRunScriptKeyPress(nFile, nRecord, nNumber, nValue, nFlag)
+{
+        if (nNumber == 52)
+        {
+// Ask user if they want to launch remote support
+                local UserResponse = ICR_MessageBox("Do you want to launch Splashtop SOS?", "Please call Yorkshire Payments @ 01422-323785", "ICRTouch", 1);
+// If user selected yes
+                if (UserResponse == 1)
+                {
+// Prompt the user for a password
+                        local CorrectPassword = 96757;
+// Set the attempts variable up to record attempts to
+                        local Attempts = 0;
+// Set the max attempts variable up to set a limit
+                        local MaxAttempts = 2;
+// Set up a looping variable that compares the attempts to the max attempts value
+                        while (Attempts < MaxAttempts)
+                        {
+// Prompt for the password
+                                local KeypadInput = ICR_GetNumberDialog("Admin Support Password", 0);
+ // If the user inputs the password correctly as advised
+                                if (KeypadInput == CorrectPassword)
+                                {
+// Start the process for launching Splashtop SOS
+                                        local g_szFolder = "C:\\Users\\Admin\\Desktop";
+                                        local szExecutable = "SplashtopSOS.exe";
+                                        local szLaunchCommand = "start \"\" /min \"" + g_szFolder + "\\" + szExecutable + "\"";
+                                        system(szLaunchCommand);
+                                        ICR_MessageBox("Process complete, please allow time for Splashtop SOS to load.", "When prompted, read the nine digit code to your Support Engineer.");
+                                        return true;
+                                }
+                                else
+// If the user inputs the wrong password into the keypad, tell them and play an error sound
+                                {
+                                        ICR_PlaySound("C:\\ICRTouch\\Sounds\\ERROR.WAV");
+                                        ICR_MessageBox("Incorrect password.");
+                                        Attempts++;
+                                }
+                        }
+// If the maximum attempts value is reached, tell the user and exit
+                        if (Attempts >= MaxAttempts)
+                        {
+                                ICR_MessageBox("Maximum password attempts reached.");
+                                return false;
+                        }
+                }
+ // Return false if conditions are not met or user declines
+                return false;
+        }
+}

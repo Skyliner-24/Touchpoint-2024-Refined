@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ETAL>
+    <FILE>OC.moc</FILE>
+    <OUTPUTFILE>output.txt</OUTPUTFILE>
+    <NAME>Order Consumables</NAME>
+    <CREATED>05/09/2024</CREATED>
+    <LASTMODIFIED>09/09/2024</LASTMODIFIED>
+    <MINVERID>53</MINVERID>
+    <AUTHOR>Sam Roberts</AUTHOR>
+</ETAL>

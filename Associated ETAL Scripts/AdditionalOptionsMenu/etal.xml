@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ETAL>
+    <FILE>AAM.moc</FILE>
+    <OUTPUTFILE>output.txt</OUTPUTFILE>
+    <NAME>Additional Options Menu</NAME>
+    <CREATED>29/08/2024</CREATED>
+    <LASTMODIFIED>09/09/2024</LASTMODIFIED>
+    <MINVERID>50</MINVERID>
+    <AUTHOR>Sam Roberts</AUTHOR>
+</ETAL>

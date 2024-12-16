@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ETAL>
+    <FILE>LT.moc</FILE>
+    <OUTPUTFILE>output.txt</OUTPUTFILE>
+    <NAME>Launch TOW</NAME>
+    <CREATED>09/09/2024</CREATED>
+    <LASTMODIFIED>09/09/2024</LASTMODIFIED>
+    <MINVERID>54</MINVERID>
+    <AUTHOR>Sam Roberts</AUTHOR>
+</ETAL>

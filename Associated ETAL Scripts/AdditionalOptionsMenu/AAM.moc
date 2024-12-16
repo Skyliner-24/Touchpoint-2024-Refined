@@ -1,0 +1,87 @@
+///////////////////////////////////////////
+////////// Dylan's Debug Window //////////
+/////////////////////////////////////////
+
+local bDebugPrinting = false;  //Flag for Debugging
+
+function OnInit()        //Enables Debugging in console
+
+{
+
+    ICR_EnableDebugLog(bDebugPrinting);
+
+    ICR_SetLocalUserData("bDebugPrinting",bDebugPrinting);
+
+   
+
+    if(bDebugPrinting)
+
+    {
+
+        ICR_SetFeature("CONSOLE",bDebugPrinting);
+
+        ICR_SetFeature("AUTORESTART",bDebugPrinting);
+
+        ICR_SetFeature("DEBUGLOG",bDebugPrinting);
+
+    }
+
+}
+
+/////////////////////////////////////////////////////////////
+////////// Additional Options Menu by Sam Roberts //////////
+///////////////////////////////////////////////////////////
+
+function OnRunScriptKeyPress(nFile, nRecord, nNumber, nValue, nFlag)
+{
+    if (nNumber == 50)
+    {
+// Build the options and bring up the quick fixes menu
+        ICR_ListDialog_AddItem("Launch EFT Program", true);
+        ICR_ListDialog_AddItem("Splashtop SOS", false);
+        ICR_ListDialog_AddItem("Order Consumables", false);
+        ICR_ListDialog_AddItem("Launch TOW", false);
+        ICR_ListDialog_AddItem("Minimise TouchPoint", false);
+
+        local nSelection = ICR_ListDialog("Additional Options Menu");
+// Depending on the 'nSelection' value, launch associated script
+        if (nSelection == 1)
+        {
+            if (bDebugPrinting) print("Launching EFT Program...");
+            ICR_KeyPress(53, 181);
+            return true; 
+        }
+
+        if (nSelection == 2)
+        {
+            if (bDebugPrinting) print("Launching Splashtop SOS...");
+            ICR_KeyPress(53, 182);
+            return true; 
+        }
+
+        if (nSelection == 3)
+        {
+            if (bDebugPrinting) print("Opening MS Edge...");
+            ICR_KeyPress(53, 183);
+            return true; 
+        }
+
+        if (nSelection == 4)
+        {
+            if (bDebugPrinting) print("Opening TOW...");
+            ICR_KeyPress(53, 184);
+            return true; 
+        }
+
+        if (nSelection == 5)
+        {
+            if (bDebugPrinting) print("Minimising TouchPoint...");
+            ICR_SysProc("MINIMIZE");
+            return true; 
+        }
+// Return false if no valid selection is made
+        return false;
+    }
+// Return false if the condition for 'nNumber' is not met
+    return false;
+}

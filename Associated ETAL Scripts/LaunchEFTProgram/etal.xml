@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ETAL>
+    <FILE>LEFTP.moc</FILE>
+    <OUTPUTFILE>output.txt</OUTPUTFILE>
+    <NAME>Launch EFT Program</NAME>
+    <CREATED>30/08/2024</CREATED>
+    <LASTMODIFIED>30/08/2024</LASTMODIFIED>
+    <MINVERID>51</MINVERID>
+    <AUTHOR>Sam Roberts</AUTHOR>
+</ETAL>

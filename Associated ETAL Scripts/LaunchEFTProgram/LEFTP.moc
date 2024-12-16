@@ -1,0 +1,26 @@
+/////////////////////////
+// Launch EFT Program //
+///////////////////////
+
+function OnRunScriptKeyPress(nFile, nRecord, nNumber, nValue, nFlag)
+
+if (nNumber == 51)
+{
+// Ask user if they want to launch remote support
+        local userResponse = ICR_MessageBox("Do you want to launch the EFT program", "", "ICRTouch", 1);
+// If user selected yes
+        if (userResponse == 1)
+        {
+            ICR_MessageBox("Launching Opayo EFT for TouchPoint...", "If problems persist, please call Yorkshire Payments @ 01422-323785", 0);
+// Use function szCMD to launch Splashtop SOS from the desktop
+            local g_szFolder = "C:\\sagepay\\LocalEFT";
+            local szExecutable = "SagePayEFTInterface.exe";
+            local szLaunchCommand = "start \"\" /min \"" + g_szFolder + "\\" + szExecutable + "\"";
+            
+            system(szLaunchCommand);
+
+            return true;
+        }
+// Return false if conditions are not met or user declines
+        return false;
+}
