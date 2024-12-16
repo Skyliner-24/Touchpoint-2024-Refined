@@ -1,14 +1,14 @@
-This is the Repo for my TouchPoint 2024 Skin Refinement project I worked on for ~~*redacted to avoid being sued*~~ before I was rather graciously given the boot :3
+This is the Repo for my TouchPoint 2024 Skin Refinement project I worked on for ~~*redacted*~~ before I was rather graciously given the boot :3
 
 None of this would have been possible without ICRTouch's jumping off point of their official 2024 skin, their tutorials were a gigantic help in the creation process alongside the community on the forums.
 
-IMPORTANT NOTES:
+**IMPORTANT NOTES**:
 
 The 1024x768 Version is deployment ready alongside its associated KEYCONV.074 file, this KEYCONV.074 is **required** for the assets to place correctly.
 
-The 1366x768 Version is incomplete, when I was working at ~~*redacted to avoid being sued*~~ 1366x768 was an unorthodox resolution for us so this got minimal development time other than surface level functionality.
+The 1366x768 Version is incomplete, when I was working at ~~*redacted*~~ 1366x768 was an unorthodox resolution for us so this got minimal development time other than surface level functionality.
 
-CREDITS:
+**CREDITS**:
 
 **Main Contributors**
 
@@ -24,11 +24,11 @@ Dylan Hall - Moral support & co-worker stuff
 
 Martin Tattersall - Iconography feedback
 
-The ~~*redacted to avoid being sued*~~ Team - General feedback
+The ~~*redacted*~~ Team - General feedback
 
 Members of the Mikel Discord Server - General & accessibility feedback
   
-**Asset Accreditation**
+**Asset Credits**
 
 Credit: icons8.com
 
